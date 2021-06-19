@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "530144121178",
+    "project_id": "ippis-dd430",
+    "storage_bucket": "ippis-dd430.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530144121178:android:8f1881d79e7a32f174a363",
+        "android_client_info": {
+          "package_name": "com.flutterflow.test2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530144121178-ura84pudfnl3ldi1rh9r567tc9no62ek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc9JSL2fSDk5RvNPbccYN4GCdYZQfHcnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530144121178-ura84pudfnl3ldi1rh9r567tc9no62ek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
