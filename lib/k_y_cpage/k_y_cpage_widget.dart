@@ -1,7 +1,9 @@
+import '../backend/firebase_storage/storage.dart';
 import '../congratulations/congratulations_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../flutter_flow/upload_media.dart';
 import '../loanoffer/loanoffer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,6 +17,8 @@ class KYCpageWidget extends StatefulWidget {
 }
 
 class _KYCpageWidgetState extends State<KYCpageWidget> {
+  String uploadedFileUrl1 = '';
+  String uploadedFileUrl2 = '';
   TextEditingController textController1;
   TextEditingController textController2;
   TextEditingController textController3;
@@ -63,12 +67,12 @@ class _KYCpageWidgetState extends State<KYCpageWidget> {
                   Align(
                     alignment: Alignment(-0.11, 5.14),
                     child: Padding(
-                      padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                            padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                             child: Text(
                               'Attach your documents',
                               style: FlutterFlowTheme.bodyText1.override(
@@ -86,10 +90,10 @@ class _KYCpageWidgetState extends State<KYCpageWidget> {
                                   Align(
                                     alignment: Alignment(0, 0),
                                     child: Image.asset(
-                                      'assets/images/Photo_by_dagnogoinza_via_Iwaria__1_-removebg-preview 1.png',
+                                      'assets/images/shutterstock_1217984992.jpg',
                                       width: MediaQuery.of(context).size.width,
                                       height: 400,
-                                      fit: BoxFit.cover,
+                                      fit: BoxFit.fitHeight,
                                     ),
                                   ),
                                   Align(
@@ -127,11 +131,15 @@ class _KYCpageWidgetState extends State<KYCpageWidget> {
                                   ),
                                   Align(
                                     alignment: Alignment(0, 0),
-                                    child: Image.asset(
-                                      'assets/images/Group 61.png',
-                                      width: MediaQuery.of(context).size.width,
-                                      height: 300,
-                                      fit: BoxFit.cover,
+                                    child: Padding(
+                                      padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                                      child: Image.asset(
+                                        'assets/images/Group 61.png',
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        height: 300,
+                                        fit: BoxFit.none,
+                                      ),
                                     ),
                                   )
                                 ],
@@ -150,73 +158,103 @@ class _KYCpageWidgetState extends State<KYCpageWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    ListView(
-                      padding: EdgeInsets.zero,
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
                       children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
-                              child: Icon(
-                                Icons.assignment_outlined,
-                                color: Colors.black,
-                                size: 24,
-                              ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
+                          child: Icon(
+                            Icons.assignment_outlined,
+                            color: Colors.black,
+                            size: 24,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: Text(
+                            'KYC',
+                            style: FlutterFlowTheme.bodyText1.override(
+                              fontFamily: 'Raleway',
+                              color: FlutterFlowTheme.primaryColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
                             ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                              child: Text(
-                                'KYC',
-                                style: FlutterFlowTheme.bodyText1.override(
-                                  fontFamily: 'Raleway',
-                                  color: FlutterFlowTheme.primaryColor,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(90, 20, 0, 0),
+                          child: FFButtonWidget(
+                            onPressed: () async {
+                              await Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LoanofferWidget(),
                                 ),
-                              ),
+                                (r) => false,
+                              );
+                            },
+                            text: 'Back to dashboard',
+                            icon: Icon(
+                              Icons.arrow_back,
+                              size: 15,
                             ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(90, 20, 0, 0),
-                              child: FFButtonWidget(
-                                onPressed: () async {
-                                  await Navigator.pushAndRemoveUntil(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => LoanofferWidget(),
-                                    ),
-                                    (r) => false,
-                                  );
-                                },
-                                text: 'Back to dashboard',
-                                icon: Icon(
-                                  Icons.arrow_back,
-                                  size: 15,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 160,
-                                  height: 30,
-                                  color: Color(0xFF9E90FC),
-                                  textStyle:
-                                      FlutterFlowTheme.subtitle2.override(
-                                    fontFamily: 'Raleway',
-                                    color: Colors.white,
-                                    fontSize: 13,
-                                  ),
-                                  elevation: 16,
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1,
-                                  ),
-                                  borderRadius: 12,
-                                ),
+                            options: FFButtonOptions(
+                              width: 160,
+                              height: 30,
+                              color: Color(0xFF9E90FC),
+                              textStyle: FlutterFlowTheme.subtitle2.override(
+                                fontFamily: 'Raleway',
+                                color: Colors.white,
+                                fontSize: 13,
                               ),
-                            )
-                          ],
+                              elevation: 16,
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1,
+                              ),
+                              borderRadius: 12,
+                            ),
+                          ),
                         )
                       ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: ListView(
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,
+                        scrollDirection: Axis.vertical,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
+                                  child: Icon(
+                                    Icons.assignment_outlined,
+                                    color: Colors.black,
+                                    size: 24,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                                  child: Text(
+                                    'KYC',
+                                    style: FlutterFlowTheme.bodyText1.override(
+                                      fontFamily: 'Raleway',
+                                      color: FlutterFlowTheme.primaryColor,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                     Divider(),
                     Padding(
@@ -371,80 +409,136 @@ class _KYCpageWidgetState extends State<KYCpageWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: ListView(
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,
+                        scrollDirection: Axis.vertical,
                         children: [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                            child: Container(
-                              width: 127,
-                              height: 113,
-                              decoration: BoxDecoration(
-                                color: Color(0x00EEEEEE),
-                              ),
-                              child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
-                                text: '',
-                                icon: Icon(
-                                  Icons.cloud_upload_sharp,
-                                  size: 60,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 130,
-                                  height: 40,
-                                  color: FlutterFlowTheme.tertiaryColor,
-                                  textStyle:
-                                      FlutterFlowTheme.subtitle2.override(
-                                    fontFamily: 'Raleway',
-                                    color: Color(0xDA041BC1),
+                            padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                  child: Container(
+                                    width: 127,
+                                    height: 113,
+                                    decoration: BoxDecoration(
+                                      color: Color(0x00EEEEEE),
+                                    ),
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        final selectedMedia =
+                                            await selectMedia();
+                                        if (selectedMedia != null &&
+                                            validateFileFormat(
+                                                selectedMedia.storagePath,
+                                                context)) {
+                                          showUploadMessage(
+                                              context, 'Uploading file...',
+                                              showLoading: true);
+                                          final downloadUrl = await uploadData(
+                                              selectedMedia.storagePath,
+                                              selectedMedia.bytes);
+                                          ScaffoldMessenger.of(context)
+                                              .hideCurrentSnackBar();
+                                          if (downloadUrl != null) {
+                                            setState(() =>
+                                                uploadedFileUrl1 = downloadUrl);
+                                            showUploadMessage(
+                                                context, 'Success!');
+                                          } else {
+                                            showUploadMessage(context,
+                                                'Failed to upload media');
+                                          }
+                                        }
+                                      },
+                                      text: '',
+                                      icon: Icon(
+                                        Icons.cloud_upload_sharp,
+                                        size: 60,
+                                      ),
+                                      options: FFButtonOptions(
+                                        width: 130,
+                                        height: 40,
+                                        color: FlutterFlowTheme.tertiaryColor,
+                                        textStyle:
+                                            FlutterFlowTheme.subtitle2.override(
+                                          fontFamily: 'Raleway',
+                                          color: Color(0xDA041BC1),
+                                        ),
+                                        borderSide: BorderSide(
+                                          color: Color(0xFF9EC3EC),
+                                          width: 1,
+                                        ),
+                                        borderRadius: 12,
+                                      ),
+                                    ),
                                   ),
-                                  borderSide: BorderSide(
-                                    color: Color(0xFF9EC3EC),
-                                    width: 1,
-                                  ),
-                                  borderRadius: 12,
                                 ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(60, 0, 0, 0),
-                            child: Container(
-                              width: 127,
-                              height: 113,
-                              decoration: BoxDecoration(
-                                color: Color(0x00EEEEEE),
-                              ),
-                              child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
-                                text: '',
-                                icon: Icon(
-                                  Icons.cloud_upload_sharp,
-                                  size: 60,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 130,
-                                  height: 40,
-                                  color: FlutterFlowTheme.tertiaryColor,
-                                  textStyle:
-                                      FlutterFlowTheme.subtitle2.override(
-                                    fontFamily: 'Raleway',
-                                    color: Color(0xDA041BC1),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(60, 0, 0, 0),
+                                  child: Container(
+                                    width: 127,
+                                    height: 113,
+                                    decoration: BoxDecoration(
+                                      color: Color(0x00EEEEEE),
+                                    ),
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        final selectedMedia =
+                                            await selectMedia();
+                                        if (selectedMedia != null &&
+                                            validateFileFormat(
+                                                selectedMedia.storagePath,
+                                                context)) {
+                                          showUploadMessage(
+                                              context, 'Uploading file...',
+                                              showLoading: true);
+                                          final downloadUrl = await uploadData(
+                                              selectedMedia.storagePath,
+                                              selectedMedia.bytes);
+                                          ScaffoldMessenger.of(context)
+                                              .hideCurrentSnackBar();
+                                          if (downloadUrl != null) {
+                                            setState(() =>
+                                                uploadedFileUrl2 = downloadUrl);
+                                            showUploadMessage(
+                                                context, 'Success!');
+                                          } else {
+                                            showUploadMessage(context,
+                                                'Failed to upload media');
+                                          }
+                                        }
+                                      },
+                                      text: '',
+                                      icon: Icon(
+                                        Icons.cloud_upload_sharp,
+                                        size: 60,
+                                      ),
+                                      options: FFButtonOptions(
+                                        width: 130,
+                                        height: 40,
+                                        color: FlutterFlowTheme.tertiaryColor,
+                                        textStyle:
+                                            FlutterFlowTheme.subtitle2.override(
+                                          fontFamily: 'Raleway',
+                                          color: Color(0xDA041BC1),
+                                        ),
+                                        borderSide: BorderSide(
+                                          color: Color(0xFF9EC3EC),
+                                          width: 1,
+                                        ),
+                                        borderRadius: 12,
+                                      ),
+                                    ),
                                   ),
-                                  borderSide: BorderSide(
-                                    color: Color(0xFF9EC3EC),
-                                    width: 1,
-                                  ),
-                                  borderRadius: 12,
-                                ),
-                              ),
+                                )
+                              ],
                             ),
                           )
                         ],

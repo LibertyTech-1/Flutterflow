@@ -82,7 +82,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Raleway',
                                 color: Colors.white,
-                                fontSize: 22,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -104,7 +104,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Raleway',
                                 color: Colors.white,
-                                fontSize: 26,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -116,7 +116,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Raleway',
                                 color: Colors.white,
-                                fontSize: 36,
+                                fontSize: 28,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -126,7 +126,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Raleway',
                               color: FlutterFlowTheme.tertiaryColor,
-                              fontSize: 36,
+                              fontSize: 28,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -138,8 +138,8 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                               },
                               text: 'APPLY NOW',
                               options: FFButtonOptions(
-                                width: 180,
-                                height: 50,
+                                width: 120,
+                                height: 40,
                                 color: FlutterFlowTheme.tertiaryColor,
                                 textStyle: FlutterFlowTheme.subtitle2.override(
                                   fontFamily: 'Raleway',
@@ -160,7 +160,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
+                                  padding: EdgeInsets.fromLTRB(0, 0, 30, 30),
                                   child: Material(
                                     color: Colors.transparent,
                                     elevation: 16,
@@ -185,33 +185,33 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                         children: [
                                           Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                40, 5, 0, 0),
+                                                70, 5, 0, 0),
                                             child: Text(
                                               'Financial Freedom',
                                               style: FlutterFlowTheme.bodyText1
                                                   .override(
                                                 fontFamily: 'Raleway',
                                                 color: Color(0xDA041BC1),
-                                                fontSize: 26,
+                                                fontSize: 18,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                             ),
                                           ),
                                           Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                40, 9, 0, 0),
+                                                60, 9, 0, 0),
                                             child: Text(
                                               'IPPIS NO',
                                               style: FlutterFlowTheme.bodyText1
                                                   .override(
                                                 fontFamily: 'Raleway',
-                                                fontSize: 16,
+                                                fontSize: 14,
                                               ),
                                             ),
                                           ),
                                           Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                30, 4, 30, 0),
+                                                50, 4, 50, 0),
                                             child: TextFormField(
                                               controller: textController,
                                               obscureText: false,
@@ -222,7 +222,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                                     .override(
                                                   fontFamily: 'Raleway',
                                                   color: Color(0xFF6B6A6A),
-                                                  fontSize: 14,
+                                                  fontSize: 12,
                                                 ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
@@ -265,13 +265,13 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                                   .override(
                                                 fontFamily: 'Raleway',
                                                 color: Color(0xFF6B6A6A),
-                                                fontSize: 14,
+                                                fontSize: 12,
                                               ),
                                             ),
                                           ),
                                           Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                30, 15, 30, 0),
+                                                50, 15, 50, 0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
                                                 await Navigator.push(
@@ -316,7 +316,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                           ),
                                           Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                30, 8, 30, 0),
+                                                50, 8, 50, 0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
                                                 await Navigator.push(
@@ -355,6 +355,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                               style: FlutterFlowTheme.bodyText1
                                                   .override(
                                                 fontFamily: 'Raleway',
+                                                fontSize: 12,
                                                 fontWeight: FontWeight.bold,
                                               ),
                                             ),

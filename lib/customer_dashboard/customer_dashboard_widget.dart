@@ -75,7 +75,7 @@ class _CustomerDashboardWidgetState extends State<CustomerDashboardWidget> {
                             alignment: Alignment(0, 0),
                             child: Image.asset(
                               'assets/images/Rectangle 117.png',
-                              width: 308,
+                              width: MediaQuery.of(context).size.width,
                               height: 205,
                               fit: BoxFit.contain,
                             ),
@@ -178,7 +178,7 @@ class _CustomerDashboardWidgetState extends State<CustomerDashboardWidget> {
                       alignment: Alignment(0, 0),
                       child: Image.asset(
                         'assets/images/Rectangle 117.png',
-                        width: 300,
+                        width: MediaQuery.of(context).size.width * 0.8,
                         height: 205,
                         fit: BoxFit.cover,
                       ),

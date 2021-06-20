@@ -57,19 +57,16 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                             children: [
                               Align(
                                 alignment: Alignment(0, 0),
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 7, 0, 0),
-                                  child: Image.asset(
-                                    'assets/images/main cover 1.png',
-                                    width: MediaQuery.of(context).size.width,
-                                    height: 450,
-                                    fit: BoxFit.none,
-                                  ),
+                                child: Image.asset(
+                                  'assets/images/main cover 1.png',
+                                  width: MediaQuery.of(context).size.width,
+                                  height: 350,
+                                  fit: BoxFit.none,
                                 ),
                               ),
                               Container(
                                 width: double.infinity,
-                                height: 450,
+                                height: 350,
                                 decoration: BoxDecoration(
                                   color: Color(0x823E4C67),
                                 ),
@@ -77,7 +74,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                               Align(
                                 alignment: Alignment(-0.85, 0.9),
                                 child: Padding(
-                                  padding: EdgeInsets.fromLTRB(20, 280, 0, 0),
+                                  padding: EdgeInsets.fromLTRB(20, 255, 0, 0),
                                   child: Text(
                                     'Instant Cash for All\\n ',
                                     style: FlutterFlowTheme.bodyText1.override(
@@ -92,7 +89,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                               Align(
                                 alignment: Alignment(-0.85, 0),
                                 child: Padding(
-                                  padding: EdgeInsets.fromLTRB(20, 310, 0, 0),
+                                  padding: EdgeInsets.fromLTRB(20, 280, 0, 0),
                                   child: Text(
                                     'Civil Servants on ',
                                     style: FlutterFlowTheme.bodyText1.override(
@@ -107,7 +104,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                               Align(
                                 alignment: Alignment(-0.9, 0),
                                 child: Padding(
-                                  padding: EdgeInsets.fromLTRB(20, 330, 0, 0),
+                                  padding: EdgeInsets.fromLTRB(20, 300, 0, 0),
                                   child: Text(
                                     'iPPIS ',
                                     style: FlutterFlowTheme.bodyText1.override(
@@ -122,7 +119,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                               Align(
                                 alignment: Alignment(-0.3, 0),
                                 child: Padding(
-                                  padding: EdgeInsets.fromLTRB(20, 340, 0, 0),
+                                  padding: EdgeInsets.fromLTRB(20, 310, 0, 0),
                                   child: Text(
                                     'payroll',
                                     style: FlutterFlowTheme.bodyText1.override(
@@ -133,29 +130,39 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                   ),
                                 ),
                               ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  LibertyLogoWidget(),
-                                  Align(
-                                    alignment: Alignment(-0.95, -0.85),
-                                    child: Padding(
-                                      padding:
-                                          EdgeInsets.fromLTRB(200, 0, 30, 0),
-                                      child: IconButton(
-                                        onPressed: () {
-                                          print('IconButton pressed ...');
-                                        },
-                                        icon: FaIcon(
-                                          FontAwesomeIcons.alignJustify,
-                                          color: Color(0xFF1D1111),
-                                          size: 20,
-                                        ),
-                                        iconSize: 20,
-                                      ),
-                                    ),
-                                  )
-                                ],
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                child: ListView(
+                                  padding: EdgeInsets.zero,
+                                  shrinkWrap: true,
+                                  scrollDirection: Axis.vertical,
+                                  children: [
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        LibertyLogoWidget(),
+                                        Align(
+                                          alignment: Alignment(-0.95, -0.85),
+                                          child: Padding(
+                                            padding: EdgeInsets.fromLTRB(
+                                                200, 0, 30, 0),
+                                            child: IconButton(
+                                              onPressed: () {
+                                                print('IconButton pressed ...');
+                                              },
+                                              icon: FaIcon(
+                                                FontAwesomeIcons.alignJustify,
+                                                color: Color(0xFF1D1111),
+                                                size: 20,
+                                              ),
+                                              iconSize: 20,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
                               )
                             ],
                           )
@@ -181,7 +188,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                     child: Icon(
                                       Icons.assignment_outlined,
                                       color: Colors.black,
-                                      size: 24,
+                                      size: 18,
                                     ),
                                   ),
                                   Padding(
@@ -192,7 +199,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                           FlutterFlowTheme.bodyText1.override(
                                         fontFamily: 'Raleway',
                                         color: Color(0xFF3146FC),
-                                        fontSize: 20,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
@@ -206,7 +213,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 'IPPIS No',
                                 style: FlutterFlowTheme.bodyText1.override(
                                   fontFamily: 'Raleway',
-                                  fontSize: 18,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -223,6 +230,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       FlutterFlowTheme.bodyText1.override(
                                     fontFamily: 'Raleway',
                                     color: Color(0xFFC4C4C4),
+                                    fontSize: 12,
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
@@ -255,6 +263,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 style: FlutterFlowTheme.bodyText1.override(
                                   fontFamily: 'Raleway',
                                   color: Color(0xFFC4C4C4),
+                                  fontSize: 12,
                                 ),
                                 validator: (val) {
                                   if (val.isEmpty) {
@@ -271,7 +280,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 'BVN',
                                 style: FlutterFlowTheme.bodyText1.override(
                                   fontFamily: 'Raleway',
-                                  fontSize: 18,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -288,6 +297,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       FlutterFlowTheme.bodyText1.override(
                                     fontFamily: 'Raleway',
                                     color: Color(0xFFC4C4C4),
+                                    fontSize: 12,
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
@@ -320,6 +330,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 style: FlutterFlowTheme.bodyText1.override(
                                   fontFamily: 'Raleway',
                                   color: Color(0xFFC4C4C4),
+                                  fontSize: 12,
                                 ),
                                 validator: (val) {
                                   if (val.isEmpty) {
@@ -336,7 +347,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 'EMAIL',
                                 style: FlutterFlowTheme.bodyText1.override(
                                   fontFamily: 'Raleway',
-                                  fontSize: 18,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -353,6 +364,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       FlutterFlowTheme.bodyText1.override(
                                     fontFamily: 'Raleway',
                                     color: Color(0xFFC4C4C4),
+                                    fontSize: 12,
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
@@ -385,6 +397,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 style: FlutterFlowTheme.bodyText1.override(
                                   fontFamily: 'Raleway',
                                   color: Color(0xFFC4C4C4),
+                                  fontSize: 12,
                                 ),
                                 validator: (val) {
                                   if (val.isEmpty) {
@@ -401,7 +414,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 'PHONE No',
                                 style: FlutterFlowTheme.bodyText1.override(
                                   fontFamily: 'Raleway',
-                                  fontSize: 18,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -418,6 +431,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       FlutterFlowTheme.bodyText1.override(
                                     fontFamily: 'Raleway',
                                     color: Color(0xFFC4C4C4),
+                                    fontSize: 12,
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
@@ -450,6 +464,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 style: FlutterFlowTheme.bodyText1.override(
                                   fontFamily: 'Raleway',
                                   color: Color(0xFFC4C4C4),
+                                  fontSize: 12,
                                 ),
                                 validator: (val) {
                                   if (val.isEmpty) {
@@ -505,17 +520,9 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 }
                                 final buttonRegisterResponse = snapshot.data;
                                 return Padding(
-                                  padding: EdgeInsets.fromLTRB(60, 20, 0, 20),
+                                  padding: EdgeInsets.fromLTRB(100, 20, 0, 20),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      if (!formKey.currentState.validate()) {
-                                        return;
-                                      }
-                                      await registerCall(
-                                        ippisNo:
-                                            int.parse(textController1.text),
-                                        email: textController3.text,
-                                      );
                                       await Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -530,14 +537,14 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       size: 15,
                                     ),
                                     options: FFButtonOptions(
-                                      width: 230,
+                                      width: 180,
                                       height: 45,
                                       color: Color(0xDA041BC1),
                                       textStyle:
                                           FlutterFlowTheme.subtitle2.override(
                                         fontFamily: 'Raleway',
                                         color: Colors.white,
-                                        fontSize: 20,
+                                        fontSize: 18,
                                       ),
                                       elevation: 16,
                                       borderSide: BorderSide(
@@ -556,20 +563,6 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                     )
                   ],
                 ),
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(1, 0, 0, 0),
-                    child: Image.asset(
-                      'assets/images/Rectangle 44.png',
-                      width: MediaQuery.of(context).size.width * 0.02,
-                      height: MediaQuery.of(context).size.height * 1,
-                      fit: BoxFit.cover,
-                    ),
-                  )
-                ],
               )
             ],
           ),

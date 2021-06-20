@@ -20,7 +20,7 @@ class _CongratulationsWidgetState extends State<CongratulationsWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xCDCEEEFC),
+      backgroundColor: FlutterFlowTheme.tertiaryColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

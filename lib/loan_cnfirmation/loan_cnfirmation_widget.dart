@@ -33,7 +33,7 @@ class _LoanCnfirmationWidgetState extends State<LoanCnfirmationWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0x985C6263),
+      backgroundColor: Color(0xFFE0DFDF),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

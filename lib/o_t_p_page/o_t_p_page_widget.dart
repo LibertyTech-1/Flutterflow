@@ -91,7 +91,7 @@ class _OTPPageWidgetState extends State<OTPPageWidget> {
                                           FlutterFlowTheme.bodyText1.override(
                                         fontFamily: 'Raleway',
                                         color: Color(0xFFFFF7F7),
-                                        fontSize: 22,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -138,7 +138,7 @@ class _OTPPageWidgetState extends State<OTPPageWidget> {
                                 Align(
                                   alignment: Alignment(-0.8, 0),
                                   child: Padding(
-                                    padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+                                    padding: EdgeInsets.fromLTRB(40, 15, 0, 0),
                                     child: Text(
                                       'OTP code has been sent to  \\nyour phone 081 330 XXXX',
                                       style:
@@ -158,7 +158,7 @@ class _OTPPageWidgetState extends State<OTPPageWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              EdgeInsets.fromLTRB(0, 0, 5, 0),
+                                              EdgeInsets.fromLTRB(20, 0, 20, 0),
                                           child: TextFormField(
                                             onChanged: (_) => setState(() {}),
                                             controller: textController,
@@ -228,7 +228,7 @@ class _OTPPageWidgetState extends State<OTPPageWidget> {
                                     children: [
                                       Padding(
                                         padding:
-                                            EdgeInsets.fromLTRB(20, 0, 0, 0),
+                                            EdgeInsets.fromLTRB(50, 0, 0, 0),
                                         child: Text(
                                           'Didn’t get OTP? ',
                                           style: FlutterFlowTheme.bodyText1

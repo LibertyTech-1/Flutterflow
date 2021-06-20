@@ -100,7 +100,7 @@ class _EmaiverificationWidgetState extends State<EmaiverificationWidget> {
                     Padding(
                       padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
                       child: Text(
-                        'Verification code has been sent \\nxxx xxx xxx 2505 ',
+                        'Verification code has been \\nsent xxx xxx xxx 2505 ',
                         style: FlutterFlowTheme.bodyText1.override(
                           fontFamily: 'Raleway',
                           fontSize: 15,
