@@ -61,7 +61,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                   padding: EdgeInsets.fromLTRB(0, 7, 0, 0),
                                   child: Image.asset(
                                     'assets/images/main cover 1.png',
-                                    width: double.infinity,
+                                    width: MediaQuery.of(context).size.width,
                                     height: 450,
                                     fit: BoxFit.none,
                                   ),
@@ -79,7 +79,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(20, 280, 0, 0),
                                   child: Text(
-                                    'Instant Cash for All \\n\\n ',
+                                    'Instant Cash for All\\n ',
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Raleway',
                                       color: Colors.black,
@@ -94,7 +94,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(20, 310, 0, 0),
                                   child: Text(
-                                    'Civil Servants on \\n',
+                                    'Civil Servants on ',
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Raleway',
                                       color: FlutterFlowTheme.tertiaryColor,
@@ -109,7 +109,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(20, 330, 0, 0),
                                   child: Text(
-                                    'iPPIS \\n',
+                                    'iPPIS ',
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Raleway',
                                       color: FlutterFlowTheme.tertiaryColor,
@@ -156,17 +156,6 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                     ),
                                   )
                                 ],
-                              ),
-                              Align(
-                                alignment: Alignment(0, 0),
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 60, 0, 0),
-                                  child: Image.asset(
-                                    'assets/images/Group 61.png',
-                                    width: MediaQuery.of(context).size.width,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
                               )
                             ],
                           )

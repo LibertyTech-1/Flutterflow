@@ -325,7 +325,7 @@ class _PhoneVerificationpageWidgetState
                       options: FFButtonOptions(
                         width: 130,
                         height: 40,
-                        color: Color(0x005189EC),
+                        color: FlutterFlowTheme.tertiaryColor,
                         textStyle: FlutterFlowTheme.subtitle2.override(
                           fontFamily: 'Raleway',
                           color: Color(0xFF070D3D),
@@ -357,7 +357,7 @@ class _PhoneVerificationpageWidgetState
                       options: FFButtonOptions(
                         width: 130,
                         height: 40,
-                        color: Color(0x005189EC),
+                        color: FlutterFlowTheme.tertiaryColor,
                         textStyle: FlutterFlowTheme.subtitle2.override(
                           fontFamily: 'Raleway',
                           color: Color(0xFF070D3D),

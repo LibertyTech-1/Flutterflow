@@ -2,6 +2,8 @@ import '../components/liberty_logo_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../o_t_p_page/o_t_p_page_widget.dart';
+import '../registration_page/registration_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -271,8 +273,14 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                             padding: EdgeInsets.fromLTRB(
                                                 30, 15, 30, 0),
                                             child: FFButtonWidget(
-                                              onPressed: () {
-                                                print('Button pressed ...');
+                                              onPressed: () async {
+                                                await Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        OTPPageWidget(),
+                                                  ),
+                                                );
                                               },
                                               text: 'Login',
                                               options: FFButtonOptions(
@@ -310,8 +318,14 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                             padding: EdgeInsets.fromLTRB(
                                                 30, 8, 30, 0),
                                             child: FFButtonWidget(
-                                              onPressed: () {
-                                                print('Button pressed ...');
+                                              onPressed: () async {
+                                                await Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        RegistrationPageWidget(),
+                                                  ),
+                                                );
                                               },
                                               text: 'Register',
                                               options: FFButtonOptions(

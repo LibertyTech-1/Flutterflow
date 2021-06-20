@@ -127,57 +127,65 @@ class _LoanofferWidgetState extends State<LoanofferWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
+                    ListView(
+                      padding: EdgeInsets.zero,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
-                          child: Icon(
-                            Icons.assignment_outlined,
-                            color: Colors.black,
-                            size: 24,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            'LOAN OFFER',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Raleway',
-                              color: FlutterFlowTheme.primaryColor,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 50, 0),
-                          child: FFButtonWidget(
-                            onPressed: () async {
-                              Navigator.pop(context);
-                            },
-                            text: 'Back to dashboard',
-                            icon: Icon(
-                              Icons.arrow_back,
-                              size: 15,
-                            ),
-                            options: FFButtonOptions(
-                              width: 160,
-                              height: 30,
-                              color: Color(0xFF9E90FC),
-                              textStyle: FlutterFlowTheme.subtitle2.override(
-                                fontFamily: 'Raleway',
-                                color: Colors.white,
-                                fontSize: 13,
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
+                              child: Icon(
+                                Icons.assignment_outlined,
+                                color: Colors.black,
+                                size: 24,
                               ),
-                              elevation: 16,
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1,
-                              ),
-                              borderRadius: 12,
                             ),
-                          ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                              child: Text(
+                                'LOAN OFFER',
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.primaryColor,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(40, 20, 50, 0),
+                              child: FFButtonWidget(
+                                onPressed: () async {
+                                  Navigator.pop(context);
+                                },
+                                text: 'Back to dashboard',
+                                icon: Icon(
+                                  Icons.arrow_back,
+                                  size: 15,
+                                ),
+                                options: FFButtonOptions(
+                                  width: 160,
+                                  height: 30,
+                                  color: Color(0xFF9E90FC),
+                                  textStyle:
+                                      FlutterFlowTheme.subtitle2.override(
+                                    fontFamily: 'Raleway',
+                                    color: Colors.white,
+                                    fontSize: 13,
+                                  ),
+                                  elevation: 16,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1,
+                                  ),
+                                  borderRadius: 12,
+                                ),
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),

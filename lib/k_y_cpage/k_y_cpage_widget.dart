@@ -150,63 +150,71 @@ class _KYCpageWidgetState extends State<KYCpageWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
+                    ListView(
+                      padding: EdgeInsets.zero,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
-                          child: Icon(
-                            Icons.assignment_outlined,
-                            color: Colors.black,
-                            size: 24,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            'KYC',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Raleway',
-                              color: FlutterFlowTheme.primaryColor,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
+                              child: Icon(
+                                Icons.assignment_outlined,
+                                color: Colors.black,
+                                size: 24,
+                              ),
                             ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(90, 20, 0, 0),
-                          child: FFButtonWidget(
-                            onPressed: () async {
-                              await Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => LoanofferWidget(),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                              child: Text(
+                                'KYC',
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Raleway',
+                                  color: FlutterFlowTheme.primaryColor,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600,
                                 ),
-                                (r) => false,
-                              );
-                            },
-                            text: 'Back to dashboard',
-                            icon: Icon(
-                              Icons.arrow_back,
-                              size: 15,
-                            ),
-                            options: FFButtonOptions(
-                              width: 160,
-                              height: 30,
-                              color: Color(0xFF9E90FC),
-                              textStyle: FlutterFlowTheme.subtitle2.override(
-                                fontFamily: 'Raleway',
-                                color: Colors.white,
-                                fontSize: 13,
                               ),
-                              elevation: 16,
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1,
-                              ),
-                              borderRadius: 12,
                             ),
-                          ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(90, 20, 0, 0),
+                              child: FFButtonWidget(
+                                onPressed: () async {
+                                  await Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoanofferWidget(),
+                                    ),
+                                    (r) => false,
+                                  );
+                                },
+                                text: 'Back to dashboard',
+                                icon: Icon(
+                                  Icons.arrow_back,
+                                  size: 15,
+                                ),
+                                options: FFButtonOptions(
+                                  width: 160,
+                                  height: 30,
+                                  color: Color(0xFF9E90FC),
+                                  textStyle:
+                                      FlutterFlowTheme.subtitle2.override(
+                                    fontFamily: 'Raleway',
+                                    color: Colors.white,
+                                    fontSize: 13,
+                                  ),
+                                  elevation: 16,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1,
+                                  ),
+                                  borderRadius: 12,
+                                ),
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -389,11 +397,11 @@ class _KYCpageWidgetState extends State<KYCpageWidget> {
                                 options: FFButtonOptions(
                                   width: 130,
                                   height: 40,
-                                  color: Color(0x22FFFFFF),
+                                  color: FlutterFlowTheme.tertiaryColor,
                                   textStyle:
                                       FlutterFlowTheme.subtitle2.override(
                                     fontFamily: 'Raleway',
-                                    color: Color(0xFF9EC3EC),
+                                    color: Color(0xDA041BC1),
                                   ),
                                   borderSide: BorderSide(
                                     color: Color(0xFF9EC3EC),
@@ -424,11 +432,11 @@ class _KYCpageWidgetState extends State<KYCpageWidget> {
                                 options: FFButtonOptions(
                                   width: 130,
                                   height: 40,
-                                  color: Color(0x22FFFFFF),
+                                  color: FlutterFlowTheme.tertiaryColor,
                                   textStyle:
                                       FlutterFlowTheme.subtitle2.override(
                                     fontFamily: 'Raleway',
-                                    color: Color(0xFF9EC3EC),
+                                    color: Color(0xDA041BC1),
                                   ),
                                   borderSide: BorderSide(
                                     color: Color(0xFF9EC3EC),
@@ -475,31 +483,34 @@ class _KYCpageWidgetState extends State<KYCpageWidget> {
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: 'Back',
-                            icon: FaIcon(
-                              FontAwesomeIcons.backward,
-                            ),
-                            options: FFButtonOptions(
-                              width: 130,
-                              height: 40,
-                              color: Color(0xFF9EC3EC),
-                              textStyle: FlutterFlowTheme.subtitle2.override(
-                                fontFamily: 'Raleway',
-                                color: Colors.white,
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                            child: FFButtonWidget(
+                              onPressed: () {
+                                print('Button pressed ...');
+                              },
+                              text: '',
+                              icon: FaIcon(
+                                FontAwesomeIcons.retweet,
                               ),
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1,
+                              options: FFButtonOptions(
+                                width: 80,
+                                height: 40,
+                                color: Color(0x8BFD0606),
+                                textStyle: FlutterFlowTheme.subtitle2.override(
+                                  fontFamily: 'Raleway',
+                                  color: Colors.white,
+                                ),
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1,
+                                ),
+                                borderRadius: 18,
                               ),
-                              borderRadius: 12,
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(70, 0, 0, 0),
+                            padding: EdgeInsets.fromLTRB(110, 0, 0, 0),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 await Navigator.push(
@@ -510,23 +521,24 @@ class _KYCpageWidgetState extends State<KYCpageWidget> {
                                   ),
                                 );
                               },
-                              text: 'Proceed',
-                              icon: FaIcon(
-                                FontAwesomeIcons.stepForward,
+                              text: '',
+                              icon: Icon(
+                                Icons.navigate_next_outlined,
+                                size: 15,
                               ),
                               options: FFButtonOptions(
-                                width: 130,
+                                width: 80,
                                 height: 40,
-                                color: Color(0xFF9EC3EC),
+                                color: Color(0x880A6401),
                                 textStyle: FlutterFlowTheme.subtitle2.override(
                                   fontFamily: 'Raleway',
-                                  color: Colors.white,
+                                  color: FlutterFlowTheme.tertiaryColor,
                                 ),
                                 borderSide: BorderSide(
-                                  color: Colors.transparent,
+                                  color: FlutterFlowTheme.tertiaryColor,
                                   width: 1,
                                 ),
-                                borderRadius: 12,
+                                borderRadius: 18,
                               ),
                             ),
                           )
