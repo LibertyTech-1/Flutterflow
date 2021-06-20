@@ -336,7 +336,8 @@ class _EmaiverificationWidgetState extends State<EmaiverificationWidget> {
                                                     .width,
                                                 height: 85,
                                                 decoration: BoxDecoration(
-                                                  color: Color(0xFFEEEEEE),
+                                                  color: FlutterFlowTheme
+                                                      .tertiaryColor,
                                                 ),
                                                 child: Padding(
                                                   padding: EdgeInsets.fromLTRB(

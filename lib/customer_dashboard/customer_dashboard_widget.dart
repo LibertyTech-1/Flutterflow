@@ -5,6 +5,7 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import '../loanoffer/loanoffer_widget.dart';
 import '../pay_now/pay_now_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -47,6 +48,17 @@ class _CustomerDashboardWidgetState extends State<CustomerDashboardWidget> {
                           ),
                         ),
                       ),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        print('IconButton pressed ...');
+                      },
+                      icon: FaIcon(
+                        FontAwesomeIcons.alignJustify,
+                        color: Colors.black,
+                        size: 20,
+                      ),
+                      iconSize: 20,
                     )
                   ],
                 ),
